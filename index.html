@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TASK</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    input {
+      padding: 8px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color:#3333ff;
+      border-radius: 8px;
+      color:#ffff
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Abdallah Ashraf</h1><h2>211013206</h2><br>
+  <label for="numberInput">Enter a number:</label>
+  <input type="text" id="numberInput" placeholder="Enter a number">
+
+  <button onclick="compareNumber()">Check</button>
+
+  <div id="result"></div>
+
+  <script>
+    function compareNumber() {
+      var userInput = document.getElementById("numberInput").value;
+      var number = parseFloat(userInput);
+      var resultElement = document.getElementById("result");
+
+      if (isNaN(number)) {
+        resultElement.textContent = "Invalid input. Please enter a valid number.";
+      } else if (number > 5) {
+        resultElement.textContent = "The entered number is greater than 5.";
+      } else if (number < 5) {
+        resultElement.textContent = "The entered number is less than 5.";
+      } else {
+        resultElement.textContent = "The entered number is equal to 5.";
+      }
+    }
+  </script>
+</body>
+</html>
